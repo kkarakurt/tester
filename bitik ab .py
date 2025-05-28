@@ -2,10 +2,10 @@ def distance_calculator(queue, coordinates):
     distance = 0
     city_amount = len(queue)
     for i in range(city_amount):
-        city1_index = queue[i]
-        city2_index = queue[(i + 1) % city_amount]
-        mini_distance = ((coordinates[city1_index][0] - coordinates[city2_index][0]) ** 2 + (coordinates[city1_index][1] - coordinates[city2_index][1]) ** 2) ** 0.5
-        distance += mini_distance
+        city1_coords = queue[i]
+        city2_coords = queue[(i + 1) % city_amount]
+        mini_distance = ((coordinates[city1_coords][0]-coordinates[city2_coords][0])**2+(coordinates[city1_coords][1]-coordinates[city2_coords][1])**2)**0.5
+        distance = distance + mini_distance
     return distance
 
 def SingleSwapSearch(cities, k):
