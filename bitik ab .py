@@ -32,4 +32,4 @@ def SingleSwapSearch(cities, k):
         replays = replays + 1
     best_queue = [city_names[i] for i in current_queue]
     print("Best Solution (single swap): ", best_queue)
-    print("Shortest Distance (single swap): ", int(current_distance))
+    print("Shortest Distance (single swap): ", round(current_distance, 2))
